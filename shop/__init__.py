@@ -13,8 +13,8 @@ def create_app():
     app.config.from_object(Config)
     db.init_app(app)
     migrate.init_app(app, db, render_as_batch=True)
-    from shop.news.news import news_bp
-    app.register_blueprint(news_bp)
+    from shop.category.category import category_bp
+    app.register_blueprint(category_bp)
 
     return app
 
